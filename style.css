@@ -706,6 +706,27 @@ section {
 .mt-30 { margin-top: 30px; }
 
 /* =========================
+   HOMEPAGE STATS
+   ========================= */
+.stats-row .stat h2 {
+  font-size: 2.4rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.stats-row .stat p {
+  color: var(--gray);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .stats-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 @media (max-width: 1100px) {
