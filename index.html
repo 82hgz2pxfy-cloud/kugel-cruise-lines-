@@ -3,491 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kugel Cruises | Luxury Ocean Voyages</title>
-  <meta name="description" content="Luxury cruise experiences by Kugel Cruises — premium ships, iconic destinations, and unforgettable ocean journeys." />
+  <title>Kugel Cruises | Luxury Travel Redefined</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
 
-<div class="topbar">Now Sailing Into a New Era of Luxury Travel • Discover Kugel Cruises</div>
+  <!-- Announcement Bar -->
+  <div class="topbar">
+    Now Sailing Into a New Era of Luxury Travel • Discover Kugel Cruises
+  </div>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="index.html">
-      <img src="assets/logo.png" class="logo" alt="Kugel Cruises Logo">
-    </a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo-wrap">
+        <img src="assets/logo.png" alt="Kugel Cruises Logo" class="logo" />
+      </div>
 
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="ships.html">Ships</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="deals.html">Deals</a>
-      <a href="deck-plans.html">Deck Plans</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="ships.html">Ships</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="deals.html">Deals</a>
+        <a href="deck-plans.html">Deck Plans</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-    <div class="nav-actions">
-      <a href="contact.html" class="btn btn-outline">Vacation Planner</a>
-      <a href="deals.html" class="btn btn-gold">Book Now</a>
-      <button class="menu-toggle" id="menuToggle">☰</button>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-outline">Vacation Planner</a>
+        <a href="deals.html" class="btn btn-gold">Book Now</a>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="ships.html">Ships</a>
-    <a href="destinations.html">Destinations</a>
-    <a href="deals.html">Deals</a>
-    <a href="deck-plans.html">Deck Plans</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</header>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="assets/hero.jpg" alt="Luxury Kugel Cruise Ship" class="hero-bg" />
+    <div class="hero-overlay"></div>
 
-<!-- HERO -->
-<section class="hero ultra-hero">
-  <img src="assets/hero.jpg" class="hero-bg" alt="Luxury cruise ship at sea">
-  <div class="hero-overlay"></div>
-
-  <div class="container hero-grid">
     <div class="hero-content">
       <p class="eyebrow">Luxury • Adventure • Exploration</p>
-      <h1>Discover the World with Kugel Cruises</h1>
-      <p class="lead">
-        Experience a new standard of ocean travel — elegant ships, iconic destinations,
-        and unforgettable voyages designed for travelers who want more than a vacation.
+      <h1>Luxury Cruise Travel, Reimagined.</h1>
+      <p class="hero-subtext">
+        Sail the world aboard elegantly designed ships crafted for unforgettable
+        journeys across the Caribbean, Mediterranean, and beyond.
       </p>
 
       <div class="hero-buttons">
-        <a href="deals.html" class="btn btn-gold">Explore Sailings</a>
-        <a href="#" class="btn btn-outline" data-scroll="#searchCruises">Find Your Cruise</a>
-      </div>
-
-      <div class="hero-badges">
-        <span>Premium Suites</span>
-        <span>Destination-Led Voyages</span>
-        <span>Signature Dining</span>
+        <a href="ships.html" class="btn btn-gold">Explore Ships</a>
+        <a href="destinations.html" class="btn btn-outline-light">View Destinations</a>
       </div>
     </div>
+  </section>
 
-    <div class="floating-booking-card reveal-float">
-      <div class="booking-topline">Featured Voyage</div>
-      <h3>Journey to the Ice Wall</h3>
-      <p>Barcelona • Cannes • Florence • Rome</p>
-
-      <div class="booking-meta">
-        <div>
-          <span>Ship</span>
-          <strong>Kugel Horizon</strong>
-        </div>
-        <div>
-          <span>From</span>
-          <strong>$1,499</strong>
-        </div>
-      </div>
-
-      <a href="deals.html" class="btn btn-gold" style="width:100%; margin-top: 20px;">View Voyage</a>
-    </div>
-  </div>
-</section>
-
-<!-- LUXURY MARQUEE -->
-<section class="marquee-wrap">
-  <div class="marquee-track">
-    <span>Oceanview Luxury</span>
-    <span>Curated Shore Experiences</span>
-    <span>World-Class Dining</span>
-    <span>Resort-Style Decks</span>
-    <span>Global Discovery</span>
-    <span>Oceanview Luxury</span>
-    <span>Curated Shore Experiences</span>
-    <span>World-Class Dining</span>
-    <span>Resort-Style Decks</span>
-    <span>Global Discovery</span>
-  </div>
-</section>
-
-<!-- SEARCH -->
-<section class="search-section" id="searchCruises">
-  <div class="container">
-    <div class="search-card">
-      <h2>Find Your Perfect Voyage</h2>
-
-      <form class="search-form">
-        <div class="form-group">
-          <label>Destination</label>
-          <select>
-            <option>Caribbean</option>
-            <option>Mediterranean</option>
-            <option>Alaska</option>
-            <option>South Pacific</option>
-            <option>Northern Europe</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Departure Month</label>
-          <select>
-            <option>Any Month</option>
-            <option>January</option>
-            <option>March</option>
-            <option>June</option>
-            <option>September</option>
-            <option>December</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Ship</label>
-          <select>
-            <option>Any Ship</option>
-            <option>Kugel Horizon</option>
-            <option>Kugel Odyssey</option>
-            <option>Kugel Aurora</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Guests</label>
-          <select>
-            <option>2 Guests</option>
-            <option>1 Guest</option>
-            <option>3 Guests</option>
-            <option>4 Guests</option>
-            <option>5+ Guests</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-gold search-btn">Search Cruises</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section>
-  <div class="container">
-    <div class="stats-row">
-      <div class="stat card">
-        <h2 data-count="25" data-suffix="+">0</h2>
-        <p>Global Destinations</p>
-      </div>
-      <div class="stat card">
-        <h2 data-count="120" data-suffix="+">0</h2>
-        <p>Curated Shore Experiences</p>
-      </div>
-      <div class="stat card">
-        <h2 data-count="12" data-suffix="+">0</h2>
-        <p>Signature Dining Venues</p>
-      </div>
-      <div class="stat card">
-        <h2 data-count="100" data-suffix="%">0</h2>
-        <p>Luxury Designed In Every Detail</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED SHIP SPOTLIGHT -->
-<section class="spotlight-section">
-  <div class="container spotlight-grid">
-    <div class="spotlight-image reveal-float">
-      <img src="assets/ship1.jpg" alt="Kugel Horizon">
-    </div>
-
-    <div class="spotlight-content">
-      <p class="eyebrow dark">Featured Ship</p>
-      <h2>Kugel Horizon</h2>
+  <!-- Intro Section -->
+  <section class="section intro">
+    <div class="container narrow">
+      <p class="section-kicker">WELCOME TO KUGEL</p>
+      <h2>Where World-Class Luxury Meets Ocean Exploration</h2>
       <p>
-        Kugel Horizon was imagined as a floating luxury resort — dramatic ocean views,
-        refined interiors, destination-forward experiences, and elevated comfort from bow to stern.
+        Kugel Cruises blends elegant design, elevated hospitality, and breathtaking
+        destinations into one seamless luxury voyage. Every itinerary is crafted
+        to feel extraordinary from departure to return.
       </p>
-
-      <div class="spotlight-highlights">
-        <div class="mini-glass-card">
-          <strong>4,200</strong>
-          <span>Guests</span>
-        </div>
-        <div class="mini-glass-card">
-          <strong>12+</strong>
-          <span>Dining Venues</span>
-        </div>
-        <div class="mini-glass-card">
-          <strong>Oceanfront</strong>
-          <span>Wellness Spaces</span>
-        </div>
-      </div>
-
-      <div class="mt-30">
-        <a href="ship-horizon.html" class="btn btn-gold">Explore Horizon</a>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- DESTINATIONS -->
-<section class="dark-section">
-  <div class="container">
-    <div class="section-header light">
-      <p class="eyebrow">Curated Destinations</p>
-      <h2>Voyages Worth Dreaming About</h2>
-      <p>From turquoise island escapes to cinematic coastlines, Kugel voyages are built around unforgettable places.</p>
-    </div>
-
-    <div class="destination-grid">
-      <div class="destination-card">
-        <img src="assets/caribbean.jpg" alt="Caribbean cruise">
-        <div class="destination-overlay">
-          <h3>Caribbean</h3>
-          <a href="destinations.html" class="light-link">Explore Destination →</a>
-        </div>
+  <!-- Featured Ships -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">OUR FLEET</p>
+        <h2>Signature Ships</h2>
       </div>
 
-      <div class="destination-card">
-        <img src="assets/mediterranean.jpg" alt="Mediterranean cruise">
-        <div class="destination-overlay">
-          <h3>Mediterranean</h3>
-          <a href="destinations.html" class="light-link">Explore Destination →</a>
-        </div>
-      </div>
-
-      <div class="destination-card">
-        <img src="assets/alaska.jpg" alt="Alaska cruise">
-        <div class="destination-overlay">
-          <h3>Alaska</h3>
-          <a href="destinations.html" class="light-link">Explore Destination →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SIGNATURE EXPERIENCES -->
-<section class="bg-light">
-  <div class="container">
-    <div class="section-header">
-      <p class="eyebrow dark">Signature Experiences</p>
-      <h2>What Defines the Kugel Experience</h2>
-      <p>Every element of the voyage is designed to feel immersive, elegant, and memorable.</p>
-    </div>
-
-    <div class="grid-4">
-      <div class="feature-box">
-        <h3>Suite Living</h3>
-        <p>Refined accommodations with panoramic views, elevated finishes, and premium comfort.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Destination Dining</h3>
-        <p>Menus inspired by the regions you sail, paired with elevated culinary experiences.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Wellness at Sea</h3>
-        <p>Oceanfront spa, relaxation spaces, and wellness experiences built around serenity.</p>
-      </div>
-      <div class="feature-box">
-        <h3>Evenings Reimagined</h3>
-        <p>Elegant lounges, live music, immersive entertainment, and cinematic open-sea nights.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FLEET -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <p class="eyebrow dark">The Fleet</p>
-      <h2>Modern Ships, Elevated Travel</h2>
-      <p>Every Kugel vessel is imagined as a floating luxury resort built for discovery, comfort, and style.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card image-card">
-        <img src="assets/ship1.jpg" alt="Kugel Horizon">
-        <div class="card-body">
-          <h3>Kugel Horizon</h3>
-          <p>Our panoramic flagship crafted for global discovery and refined comfort.</p>
-          <div class="mt-20">
-            <a href="ship-horizon.html" class="btn btn-outline-dark">Explore Ship</a>
+      <div class="grid-3">
+        <div class="card">
+          <img src="assets/ship1.jpg" alt="Kugel Horizon" />
+          <div class="card-content">
+            <h3>Kugel Horizon</h3>
+            <p>Our flagship vessel designed for iconic journeys and elevated ocean living.</p>
           </div>
         </div>
-      </div>
 
-      <div class="card image-card">
-        <img src="assets/ship2.jpg" alt="Kugel Odyssey">
-        <div class="card-body">
-          <h3>Kugel Odyssey</h3>
-          <p>Adventure-forward luxury with immersive onboard experiences and elegant design.</p>
-          <div class="mt-20">
-            <a href="ships.html" class="btn btn-outline-dark">Explore Ship</a>
+        <div class="card">
+          <img src="assets/ship2.jpg" alt="Kugel Odyssey" />
+          <div class="card-content">
+            <h3>Kugel Odyssey</h3>
+            <p>Adventure-driven luxury built for tropical escapes and unforgettable discovery.</p>
           </div>
         </div>
-      </div>
 
-      <div class="card image-card">
-        <img src="assets/ship3.jpg" alt="Kugel Aurora">
-        <div class="card-body">
-          <h3>Kugel Aurora</h3>
-          <p>An ultra-luxury voyage experience designed for serenity, beauty, and escape.</p>
-          <div class="mt-20">
-            <a href="ships.html" class="btn btn-outline-dark">Explore Ship</a>
+        <div class="card">
+          <img src="assets/ship3.jpg" alt="Kugel Aurora" />
+          <div class="card-content">
+            <h3>Kugel Aurora</h3>
+            <p>Elegant evening sailings, romantic atmosphere, and refined ultra-luxury comfort.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- DEALS -->
-<section class="bg-light">
-  <div class="container">
-    <div class="section-header">
-      <p class="eyebrow dark">Featured Offers</p>
-      <h2>Luxury Sailings at Exceptional Value</h2>
-      <p>Discover limited-time opportunities to experience Kugel Cruises in style.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="deal-card">
-        <span class="tag">Best Seller</span>
-        <h3>7-Night Caribbean Escape</h3>
-        <p>Roundtrip from Miami with tropical island stops and luxury at sea.</p>
-        <div class="price">From $899 / guest</div>
-        <a href="deals.html" class="btn btn-outline-dark">View Offer</a>
+  <!-- Destinations -->
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="section-kicker">DESTINATIONS</p>
+        <h2>Explore the World in Style</h2>
       </div>
 
-      <div class="deal-card">
-        <span class="tag">Luxury Pick</span>
-        <h3>10-Night Mediterranean Voyage</h3>
-        <p>Explore Europe’s most beautiful coastal cities in elevated comfort.</p>
-        <div class="price">From $1,499 / guest</div>
-        <a href="deals.html" class="btn btn-outline-dark">View Offer</a>
-      </div>
+      <div class="grid-3">
+        <div class="destination-card">
+          <img src="assets/caribbean.jpg" alt="Caribbean" />
+          <div class="destination-overlay">
+            <h3>Caribbean</h3>
+          </div>
+        </div>
 
-      <div class="deal-card">
-        <span class="tag">Adventure Favorite</span>
-        <h3>8-Night Alaska Discovery</h3>
-        <p>Majestic landscapes, glacier views, and unforgettable northern scenery.</p>
-        <div class="price">From $1,199 / guest</div>
-        <a href="deals.html" class="btn btn-outline-dark">View Offer</a>
+        <div class="destination-card">
+          <img src="assets/mediterranean.jpg" alt="Mediterranean" />
+          <div class="destination-overlay">
+            <h3>Mediterranean</h3>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <img src="assets/alaska.jpg" alt="Alaska" />
+          <div class="destination-overlay">
+            <h3>Alaska</h3>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonial-section dark-section">
-  <div class="container">
-    <div class="section-header light">
-      <p class="eyebrow">Guest Impressions</p>
-      <h2>The Feeling Guests Remember</h2>
-      <p>Luxury is not just what you see — it’s what the voyage feels like.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="testimonial-card">
-        <p>“It felt more like a private luxury resort than a cruise. Every detail felt elevated.”</p>
-        <strong>— Guest Experience Preview</strong>
+  <!-- Experience Split -->
+  <section class="section">
+    <div class="container split-layout">
+      <div class="split-image">
+        <img src="assets/suite.jpg" alt="Luxury Suite" />
       </div>
-
-      <div class="testimonial-card">
-        <p>“The ship design, the atmosphere, the destinations — everything felt cinematic.”</p>
-        <strong>— Voyage Concept Review</strong>
-      </div>
-
-      <div class="testimonial-card">
-        <p>“If modern luxury and exploration had a cruise line, this would be it.”</p>
-        <strong>— Brand Impression</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY KUGEL -->
-<section>
-  <div class="container split">
-    <div>
-      <p class="eyebrow dark">Why Kugel</p>
-      <h2 style="color: var(--navy); margin-bottom: 18px;">More Than a Cruise. A Curated Journey.</h2>
-      <p>
-        Kugel Cruises was built around the idea that modern luxury should still feel adventurous,
-        cinematic, and deeply memorable. Every detail is designed to make the journey feel as meaningful as the destination.
-      </p>
-
-      <ul class="bullets">
-        <li>• Signature suites and panoramic oceanview spaces</li>
-        <li>• Elevated dining and destination-inspired cuisine</li>
-        <li>• Spa, wellness, and resort-style deck experiences</li>
-        <li>• Curated itineraries designed around exploration</li>
-      </ul>
-
-      <div class="mt-30">
-        <a href="ships.html" class="btn btn-gold">Explore the Fleet</a>
-      </div>
-    </div>
-
-    <img src="assets/suite.jpg" alt="Luxury cruise suite">
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="dark-section">
-  <div class="container">
-    <div class="newsletter-card">
-      <div>
-        <p class="eyebrow">Stay Inspired</p>
-        <h2 style="color:white; margin-bottom: 12px;">Get Kugel Cruise Updates</h2>
-        <p style="color: rgba(255,255,255,0.82); max-width: 540px;">
-          Be first to hear about new sailings, premium offers, ship launches, and destination inspiration.
+      <div class="split-copy">
+        <p class="section-kicker">THE KUGEL EXPERIENCE</p>
+        <h2>Elevated Living at Sea</h2>
+        <p>
+          From oceanfront suites and private wellness spaces to signature dining
+          and panoramic lounges, every detail is designed to feel polished,
+          immersive, and unforgettable.
         </p>
+        <a href="ships.html" class="btn btn-gold">Discover Onboard Luxury</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Kugel Cruises</h3>
+        <p>Luxury. Adventure. Exploration.</p>
       </div>
 
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-gold">Join</button>
-      </form>
-    </div>
-  </div>
-</section>
+      <div>
+        <h4>Explore</h4>
+        <a href="ships.html">Ships</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="deals.html">Deals</a>
+      </div>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <img src="assets/logo.png" class="footer-logo" alt="Kugel Cruises Logo">
-      <p>Luxury voyages crafted for exploration, elegance, and unforgettable memories.</p>
-    </div>
-
-    <div>
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="ships.html">Ships</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="deals.html">Deals</a></li>
-        <li><a href="deck-plans.html">Deck Plans</a></li>
-      </ul>
+      <div>
+        <h4>Plan</h4>
+        <a href="deck-plans.html">Deck Plans</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
 
-    <div>
-      <h4>Support</h4>
-      <ul>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="contact.html">FAQs</a></li>
-        <li><a href="contact.html">Manage Booking</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Accessibility</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">© 2026 Kugel Cruises. All rights reserved.</div>
-</footer>
+    <p class="footer-bottom">© 2026 Kugel Cruises. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
