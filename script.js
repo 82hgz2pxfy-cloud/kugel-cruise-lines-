@@ -1,5 +1,5 @@
 // ================================
-// KUGEL CRUISES — LUXURY FRONTEND
+// KUGEL CRUISES — ULTRA LUXURY JS
 // ================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScrollButtons();
   initDemoForms();
   initParallaxHero();
+  initFloatingMotion();
+  initHeroTilt();
 });
 
 // ------------------------
@@ -64,7 +66,11 @@ function initRevealAnimations() {
     .newsletter-card,
     .search-card,
     .section-header,
-    .stats-row .stat
+    .stats-row .stat,
+    .spotlight-image,
+    .spotlight-content,
+    .testimonial-card,
+    .floating-booking-card
   `);
 
   revealElements.forEach(el => {
@@ -181,5 +187,48 @@ function initParallaxHero() {
   window.addEventListener("scroll", () => {
     const offset = window.scrollY * 0.18;
     heroBg.style.transform = `translateY(${offset}px) scale(1.08)`;
+  });
+}
+
+// ------------------------
+// FLOATING MOTION
+// ------------------------
+function initFloatingMotion() {
+  const floatingEls = document.querySelectorAll(".reveal-float, .floating-booking-card, .spotlight-image");
+
+  floatingEls.forEach((el, index) => {
+    const amplitude = 8 + (index % 3) * 4;
+    let start = performance.now();
+
+    function animate(time) {
+      const y = Math.sin((time - start) / 1200) * amplitude;
+      el.style.translate = `0 ${y}px`;
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  });
+}
+
+// ------------------------
+// HERO TILT EFFECT
+// ------------------------
+function initHeroTilt() {
+  const card = document.querySelector(".floating-booking-card");
+  if (!card) return;
+
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = ((x / rect.width) - 0.5) * 8;
+    const rotateX = ((y / rect.height) - 0.5) * -8;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
   });
 }
